@@ -28,7 +28,7 @@ awaitable<void> handle_client(tcp::socket socket) {
 
     // Socket is automatically closed when it goes out of scope
 }
- 
+
 // Coroutine to listen for incoming connections
 awaitable<void> listener() {
     // We grab a handle to the engine that is running this coroutine
@@ -52,8 +52,6 @@ awaitable<void> listener() {
     }
 }
 
-
-
 int main() {
     boost::asio::io_context io_context;
 
@@ -64,5 +62,4 @@ int main() {
     io_context.run();
 
     return 0;
-}
 }
